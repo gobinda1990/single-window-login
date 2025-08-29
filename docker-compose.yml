@@ -1,6 +1,6 @@
 services:
   backend:
-    image: backend-auth:latest
+    image: backend:latest
     container_name: backend-auth
     ports:
       - "8083:8083"
