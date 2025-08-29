@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/gobinda1990/single-window-login.git'
+                git branch: 'master', url: 'https://github.com/gobinda1990/single-window-login.git'
             }
         }
 
