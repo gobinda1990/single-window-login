@@ -32,6 +32,17 @@ pipeline {
                 """
             }
         }
+        stage('Health Check') {
+            steps {
+                script {
+                    sh """
+                    echo "Waiting for backend to start..."
+                    sleep 15
+                    curl -f http://localhost:8084/actuator/health || (echo 'Health check failed!' && exit 1)
+                    """
+                }
+            }
+        }
     }
 }
 
